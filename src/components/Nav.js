@@ -1,11 +1,16 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
+
 
 function Nav() {
   return (
-    <div>
-      <h1>Nav Page</h1>
-    </div>
+    <nav>
+      <h3>ROUTING</h3>
+      <ul className='nav-links'>
+        <li>About</li>
+        <li>Shop</li>
+      </ul>
+    </nav>
   );
 }
 
