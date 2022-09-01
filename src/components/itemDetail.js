@@ -1,23 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.css'; 
 
-function itemDetail({ match }) {
-  useEffect(() => {
-    fetchItem();
-    console.log(match);
-  }, []);
-
-  const [item, setItem] = useState({
-    Image: {}
-  });
-
-  const fetchItem = async () => {
-    const fetchItem = await fetch(`https://fortnite-public-api.theapinetwork.com/prod09/item/get?ids=${match.params.id}`);
+function Item({ match }) {
+    useEffect(() => {
+        fetchItem();
+        console.log(match);
+    }, [])
     
-    const item = await fetchItem.json(); 
-    setItem(item);
-    console.log(item);
-  };
+    const [item, setItem] = useState({image: {}})
+
+    const fetchItem = async () => {
+        const fetchItem = await fetch(`https://fortnite-public-api.theapinetwork.com/prod09/item/get?ids=${match.params.id}`);
+        
+        const item = await fetchItem.json(); 
+        setItem(item);
+        console.log(item);
+    };
 
   return (
     <div>
@@ -27,4 +25,4 @@ function itemDetail({ match }) {
   );
 }
 
-export default itemDetail;
+export default Item;

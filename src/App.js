@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './components/Nav';
 import About from './components/About';
 import Shop from './components/Shop';
-import itemDetail from './components/itemDetail';
+import ItemDetail from './components/ItemDetail';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/about" exact element={<About />} />
           <Route path='/shop' exact element={<Shop />} />
-          <Route path='/shop/:id' element={<itemDetail />} />
+          <Route path='/shop/:id' element={<ItemDetail />} />
         </Routes>
       </div>
     </Router>
